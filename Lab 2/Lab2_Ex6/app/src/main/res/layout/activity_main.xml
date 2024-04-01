@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: "
+        app:layout_constraintTop_toTopOf="@+id/etID"
+        app:layout_constraintBottom_toBottomOf="@+id/etID"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+
+        android:inputType="text"
+        />
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full name: "
+        app:layout_constraintTop_toTopOf="@+id/etName"
+        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etID"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+
+        android:inputType="text"
+        />
+    <TextView
+        android:id="@+id/tvPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Is a manager: "
+        app:layout_constraintTop_toTopOf="@+id/cbManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cbManager"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbManager"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAdd"
+        android:text="Add"
+        app:layout_constraintTop_toBottomOf="@id/cbManager"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEmployee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

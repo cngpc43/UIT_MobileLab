@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab2_Ex3</string>
+    <string name="title">Quản lý nhân viên</string>
+    <string name="maNV">Mã NV</string>
+    <string name="tenNV">Tên NV</string>
+    <string name="typeNV">Loại NV</string>
+    <string name="btnThem">Thêm NV</string>
+    <string name="chinhthuc">Chính thức</string>
+    <string name="thoivu">Thời vụ</string>
+</resources>

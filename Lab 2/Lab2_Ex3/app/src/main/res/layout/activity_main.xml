@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textAlignment="center"
+
+        android:background="@color/green"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvMaNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maNV"
+        android:textAlignment="center"
+
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/etMaNV"
+        app:layout_constraintBottom_toBottomOf="@+id/etMaNV"
+
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:id="@+id/etMaNV"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/tvMaNV"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tvTenNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tenNV"
+        android:textAlignment="center"
+
+        android:layout_marginStart="10dp"
+
+
+        app:layout_constraintTop_toTopOf="@+id/etTenNV"
+        app:layout_constraintBottom_toBottomOf="@+id/etTenNV"
+
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/etTenNV"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@+id/etMaNV"
+        app:layout_constraintTop_toBottomOf="@+id/etMaNV"
+
+        />
+
+    <TextView
+        android:id="@+id/tvTypeNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/typeNV"
+        android:textAlignment="center"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/rgTypeNV"
+        app:layout_constraintBottom_toBottomOf="@+id/rgTypeNV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgTypeNV"
+        app:layout_constraintStart_toStartOf="@+id/etTenNV"
+        app:layout_constraintTop_toBottomOf="@+id/etTenNV"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chinhthuc"
+            android:id="@+id/fulltime"
+            app:layout_constraintStart_toStartOf="@+id/etTenNV"
+            app:layout_constraintTop_toBottomOf="@+id/etTenNV"
+
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thoivu"
+            android:id="@+id/parttime"
+            app:layout_constraintStart_toEndOf="@+id/fulltime"
+            app:layout_constraintTop_toBottomOf="@+id/etTenNV"
+            android:layout_marginStart="10dp"
+            />
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnThem"
+        android:id="@+id/insert"
+        app:layout_constraintStart_toStartOf="@+id/rgTypeNV"
+        app:layout_constraintTop_toBottomOf="@+id/rgTypeNV"
+
+        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvNhanVien"
+        app:layout_constraintTop_toBottomOf="@+id/insert"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+    </ListView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
